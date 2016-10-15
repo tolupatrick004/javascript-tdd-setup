@@ -28,7 +28,20 @@ describe("Prime Number Validity Tests", function(){
         var test = check_prime_number(number);
         var expected = false;
         assert.equal(test, expected, "Invalid input, No number was entered");
+    })
 
+    it("Check if the value entered was null", function(){
+        var number = null;
+        var test = check_prime_number(number);
+        var expected = false;
+        assert.equal(test,expected);
+    })
+
+    it("Checks if the value is a string", function(){
+        var number ="invalid";
+        var test = check_prime_number(number);
+        var expected = false;
+        assert.equal(test,expected,"Invalid input, string entered. Enter a correct value");
     })
 })
 
