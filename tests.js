@@ -43,6 +43,13 @@ describe("Prime Number Validity Tests", function(){
         var expected = false;
         assert.equal(test,expected,"Invalid input, string entered. Enter a correct value");
     })
+
+    it("Checks if the value is an array", function(){
+        var number = [1,2,3,4,5,6];
+        var test = check_prime_number(number);
+        var expected = false;
+        assert.equal(test, expected,"Invalid Input, user entered an array.");
+    })
 })
 
 
