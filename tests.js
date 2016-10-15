@@ -3,22 +3,24 @@
 var chai = require('chai');
 var assert = chai.assert;
 
-var NotesApplication = require('./lib/notesapplication.js');
-var Note = require('./lib/note.js');
+var SumOfPrimes = require('./lib/sum_of_primes.js');
 
-describe("Note creation works properly", function() {
-    it("assigns author based on the parameter supplied in the constructor", function() {
-        note = new Note("Hello world", "Chidiebere")
-        assert(note.author == "Chidiebere")
+
+describe("Prime Number Validity Tests", function(){
+
+    it("Checks if the number entered is a prime number", function(){
+        var number = 3;
+        var test = check_prime_number(number);
+        var expected = true;
+        assert.equal(test, expected);
     })
-})
 
-describe("Notes application increments number of notes as notes are added", function() {
-    it("increments the note list as notes are added", function() {
-        note = new Note("Hello world", "Chidiebere");
-        noteapp = new NotesApplication("Chidiebere");
-        assert(noteapp.notelist.length == 0)
-        noteapp.addNote(note)
-        assert(noteapp.notelist.length == 1)
+
+describe("Sum of prime number Tests", function(){
+
+    it("Check the validity of the sums of the numbers entered", function(){
+        var test = sum_of_primes(10);
+        var expected = 17;
+        assert.equal(test, expected);
     })
 })
