@@ -15,6 +15,23 @@ describe("Prime Number Validity Tests", function(){
         assert.equal(test, expected);
     })
 
+    it("Checks if the valued entered is negative", function(){
+        var number = -1;
+        var test = check_prime_number(number);
+        var expected = false;
+        assert.equal(test, expected, "Invalid input, number is a negative number");
+    })
+
+    it("Check if no number was entered", function(){
+        var number=" ";
+        number = number.trim();
+        var test = check_prime_number(number);
+        var expected = false;
+        assert.equal(test, expected, "Invalid input, No number was entered");
+
+    })
+})
+
 
 describe("Sum of prime number Tests", function(){
 
